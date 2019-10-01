@@ -57,10 +57,6 @@ kube_network_plugin: flannel
 kube_pods_subnet: 10.244.0.0/16
 kube_proxy_mode: iptables
 
-# enable kubectl connection from ansible machine
-kubeconfig_localhost: true
-kubectl_localhost: true
-
 # please leave it set to "true", otherwise Intel BMRA features deployed as Helm charts won't be installed
 helm_enabled: true
 
@@ -68,3 +64,12 @@ helm_enabled: true
 registry_enabled: true
 registry_storage_class: ""
 registry_local_address: "localhost:5000"
+
+## Li added ##
+
+# enable kubectl connection from ansible machine
+kubeconfig_localhost: true
+kubectl_localhost: true
+
+# install/reset in role
+mode: install
